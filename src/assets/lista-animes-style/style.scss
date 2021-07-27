@@ -1,0 +1,131 @@
+@mixin mobile {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1198.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+.lista-animes {
+  padding: 0 6% 0 6%;
+
+  &__titulo {
+    display: flex;
+    padding: 1em;
+  }
+
+  &__texto {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.125em;
+    color: #585858;
+
+    @include mobile() {
+      font-size: 18px;
+    }
+
+    @include desktop() {
+      font-size: 26px;
+    }
+  }
+}
+
+.anime-listado {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #f1f1f1;
+  border-radius: 4px;
+  
+  &:nth-child(odd) {
+    background: #cfcfcf;
+  }
+  
+  &__link {
+    text-decoration: none;
+
+    color: black;
+  }
+
+  @include desktop() {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5em;
+    margin: 1em 1em 1.5em 8em;
+  }
+
+  @include mobile() {
+    margin: 1.2em 1em 1.7em 6.5em;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    align-items: center;
+  }
+
+  &__portrait {
+    position: absolute;
+
+    @include mobile() {
+      width: 136px;
+      height: 60px;
+      left: 10px;
+    }
+
+    @include desktop() {
+      width: 246px;
+      height: 103px;
+      left: 100px;
+    }
+  }
+  &__imagem {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    object-position: 50% 30%;
+  }
+  &__titulo {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+
+    @include desktop() {
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.125em;
+    }
+
+    @include mobile() {
+      font-size: 13px;
+      line-height: 15px;
+      padding: 1em;
+    }
+  }
+  &__infos {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+
+    letter-spacing: 0.125em;
+
+    @include desktop() {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+}

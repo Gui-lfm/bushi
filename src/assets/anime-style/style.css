@@ -1,0 +1,113 @@
+.anime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767.98px) {
+  .anime {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.anime__imagem {
+  padding: 2em;
+}
+
+@media (min-width: 1200px) {
+  .anime__imagem {
+    width: 650px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anime__imagem {
+    width: 250px;
+  }
+}
+
+.anime__titulo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.125em;
+  padding: 2em;
+}
+
+@media (max-width: 767.98px) {
+  .anime__titulo {
+    font-size: 20px;
+    padding: 1.7em 0.5em;
+  }
+}
+
+.anime__sinopse {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: 0.125em;
+  text-align: justify;
+  padding: 2em;
+}
+
+@media (max-width: 767.98px) {
+  .anime__sinopse {
+    font-size: 18px;
+    padding: 1.5em 0.5em;
+  }
+}
+
+.infos-extras {
+  background-color: #f5f5f5;
+  padding: 2em;
+  margin: 2em;
+}
+
+.infos-extras__titulo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.125em;
+  padding-bottom: 1em;
+}
+
+@media (max-width: 767.98px) {
+  .infos-extras__titulo {
+    font-size: 20px;
+  }
+}
+
+.infos-extras__lista {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 42px;
+  letter-spacing: 0.125em;
+}
+
+@media (max-width: 767.98px) {
+  .infos-extras__lista {
+    font-size: 18px;
+    list-style: disc;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .infos-extras__lista__lista-item {
+    padding: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

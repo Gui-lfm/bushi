@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/App.css';
+import Cabecalho from './components/Cabecalho';
+import Sobre from './components/Sobre';
+import ListaAnimes from './components/ListaAnimes';
+import Rodape from './components/Rodape';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Anime from './components/Anime';
+import Banner from './components/Banner';
+import { Provider } from "react-redux"
+import store from './components/store';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<>
+    <BrowserRouter>
+
+      <Cabecalho />
+      <Provider store={store}>
+        <Switch>
+
+          <Route exact path="/">
+            <Banner />
+            <Sobre />
+
+            <ListaAnimes />
+
+          </Route>
+          <Route path="/anime/:id">
+            <Anime />
+
+          </Route>
+
+        </Switch>
+      </Provider>
+      <Rodape />
+    </BrowserRouter>
+  </>);
 }
 
 export default App;

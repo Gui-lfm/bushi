@@ -1,0 +1,14 @@
+.navegacao {
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navegacao__logo {
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

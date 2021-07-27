@@ -1,0 +1,80 @@
+@mixin mobile {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1198.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+.banner {
+  text-align: center;
+
+  &__logo {
+    @include mobile() {
+      position: absolute;
+      width: 223px;
+      height: 56px;
+      left: 100px;
+      padding-top: 8%;
+    }
+
+    @include desktop() {
+      padding-top: 5em;
+      width: 223px;
+      height: 56px;
+    }
+  }
+
+  &__imagem {
+    background-image: linear-gradient(
+        360deg,
+        rgba(255, 0, 0, 0.69) 0%,
+        rgba(41, 0, 0, 0.51) 100%
+      ),
+      url("../img/banner-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mobile() {
+      padding: 3em 0;
+      background-position: right 35% bottom 45%;;
+    }
+  }
+
+  &__titulo {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    text-shadow: 0 0 3px;
+
+    @include mobile() {
+      font-size: 24px;
+      line-height: 28px;
+      padding: 5em 0.5em 1em 0.5em;
+    }
+
+    @include desktop() {
+      font-size: 40px;
+      line-height: 42px;
+      padding: 4em 15em;
+    }
+  }
+
+  &__scrollDown {
+    padding: 1em 0 0.5em 0;
+  }
+}

@@ -1,0 +1,110 @@
+@mixin mobile {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1198.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+.anime {
+  display: flex;
+
+  @include mobile() {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  &__imagem {
+    padding: 2em;
+
+    @include desktop() {
+      width: 650px;
+    }
+
+    @include mobile() {
+      width: 250px;
+    }
+  }
+  &__titulo {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.125em;
+    padding: 2em;
+
+    @include mobile() {
+      font-size: 20px;
+      padding: 1.7em 0.5em;
+    }
+  }
+
+  &__sinopse {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.125em;
+    text-align: justify;
+    padding: 2em;
+
+    @include mobile() {
+      font-size: 18px;
+      padding: 1.5em 0.5em;
+    }
+  }
+}
+.infos-extras {
+  background-color: #f5f5f5;
+  padding: 2em;
+  margin: 2em;
+
+  &__titulo {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.125em;
+    padding-bottom: 1em;
+
+    @include mobile() {
+      font-size: 20px;
+    }
+  }
+
+  &__lista {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    letter-spacing: 0.125em;
+
+    @include mobile() {
+      font-size: 18px;
+      list-style: disc;
+    }
+
+    &__lista-item{
+
+
+      @include mobile(){
+
+        padding: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.lista-animes {
+  padding: 0 6% 0 6%;
+}
+
+.lista-animes__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+.lista-animes__texto {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.125em;
+  color: #585858;
+}
+
+@media (max-width: 767.98px) {
+  .lista-animes__texto {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lista-animes__texto {
+    font-size: 26px;
+  }
+}
+
+.anime-listado {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.anime-listado:nth-child(odd) {
+  background: #cfcfcf;
+}
+
+.anime-listado__link {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 1200px) {
+  .anime-listado {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 2.5em;
+    margin: 1em 1em 1.5em 8em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anime-listado {
+    margin: 1.2em 1em 1.7em 6.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.anime-listado__portrait {
+  position: absolute;
+}
+
+@media (max-width: 767.98px) {
+  .anime-listado__portrait {
+    width: 136px;
+    height: 60px;
+    left: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .anime-listado__portrait {
+    width: 246px;
+    height: 103px;
+    left: 100px;
+  }
+}
+
+.anime-listado__imagem {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+}
+
+.anime-listado__titulo {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .anime-listado__titulo {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.125em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anime-listado__titulo {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 1em;
+  }
+}
+
+.anime-listado__infos {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.125em;
+}
+
+@media (min-width: 1200px) {
+  .anime-listado__infos {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anime-listado__infos {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
