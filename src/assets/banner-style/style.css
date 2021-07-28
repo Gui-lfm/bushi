@@ -4,11 +4,15 @@
 
 @media (max-width: 767.98px) {
   .banner__logo {
-    position: absolute;
     width: 223px;
     height: 56px;
-    left: 100px;
     padding-top: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .banner__logo {
+    width: 250px;
   }
 }
 
@@ -31,6 +35,13 @@
   .banner__imagem {
     padding: 3em 0;
     background-position: right 35% bottom 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .banner__imagem {
+    background-position: right 35% bottom 45%;
+    padding: 5em 0;
   }
 }
 
@@ -60,7 +71,21 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .banner__titulo {
+    font-size: 30px;
+    line-height: 32px;
+    padding: 1em 2em;
+  }
+}
+
 .banner__scrollDown {
   padding: 1em 0 0.5em 0;
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .banner__scrollDown {
+    padding: 0.5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

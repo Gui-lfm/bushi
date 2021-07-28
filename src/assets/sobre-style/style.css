@@ -19,6 +19,14 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .sobre__titulo {
+    font-size: 24px;
+    line-height: 22px;
+    padding: 8%;
+  }
+}
+
 @media (min-width: 1200px) {
   .sobre__titulo {
     font-size: 31px;
@@ -41,6 +49,12 @@
 
 .sobre__informacao {
   margin: 1em;
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .sobre__informacao {
+    padding: 1em 12em;
+  }
 }
 
 @media (min-width: 1200px) {

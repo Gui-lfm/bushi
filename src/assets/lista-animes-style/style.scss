@@ -36,6 +36,11 @@
       font-size: 18px;
     }
 
+    @include tablet(){
+
+      font-size: 22px;
+    }
+
     @include desktop() {
       font-size: 26px;
     }
@@ -50,7 +55,6 @@
   &:nth-child(odd) {
     background: #cfcfcf;
   }
-  
   &__link {
     text-decoration: none;
 
@@ -63,6 +67,15 @@
     justify-content: space-evenly;
     padding: 2.5em;
     margin: 1em 1em 1.5em 8em;
+  }
+
+  @include tablet() {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5em;
+    margin: 1em 1em 1.6em 7.5em;
   }
 
   @include mobile() {
@@ -82,10 +95,17 @@
       left: 10px;
     }
 
+    @include tablet(){
+
+      width: 150px;
+      height: 80px;
+      left: 8%
+    }
+
     @include desktop() {
       width: 246px;
       height: 103px;
-      left: 100px;
+      left: 6%;
     }
   }
   &__imagem {
@@ -106,6 +126,13 @@
       letter-spacing: 0.125em;
     }
 
+    @include tablet(){
+      font-size: 18px;
+      line-height: 20px;
+      padding: 1em;
+      letter-spacing: 0.125em
+    }
+
     @include mobile() {
       font-size: 13px;
       line-height: 15px;
@@ -122,6 +149,11 @@
     @include desktop() {
       font-size: 18px;
       line-height: 21px;
+    }
+
+    @include tablet(){
+
+      display: none;
     }
 
     @include mobile() {

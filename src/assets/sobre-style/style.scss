@@ -32,6 +32,13 @@
       line-height: 17px;
       padding: 6%;
     }
+
+    @include tablet(){
+
+      font-size: 24px;
+      line-height: 22px;
+      padding: 8%;
+    }
     @include desktop() {
       font-size: 31px;
       line-height: 36px;
@@ -54,6 +61,12 @@
   &__informacao {
     
     margin: 1em;
+
+    @include tablet(){
+
+      padding: 1em 12em;
+
+    }
 
     @include desktop(){
       padding: 2em 8em;

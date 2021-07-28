@@ -21,11 +21,15 @@
 
   &__logo {
     @include mobile() {
-      position: absolute;
       width: 223px;
       height: 56px;
-      left: 100px;
+
       padding-top: 8%;
+    }
+
+    @include tablet() {
+
+      width: 250px;
     }
 
     @include desktop() {
@@ -47,7 +51,12 @@
 
     @include mobile() {
       padding: 3em 0;
-      background-position: right 35% bottom 45%;;
+      background-position: right 35% bottom 45%;
+    }
+
+    @include tablet() {
+      background-position: right 35% bottom 45%;
+      padding: 5em 0;
     }
   }
 
@@ -72,9 +81,19 @@
       line-height: 42px;
       padding: 4em 15em;
     }
+
+    @include tablet() {
+      font-size: 30px;
+      line-height: 32px;
+      padding: 1em 2em;
+    }
   }
 
   &__scrollDown {
     padding: 1em 0 0.5em 0;
+
+    @include tablet() {
+      padding: 0.5em;
+    }
   }
 }

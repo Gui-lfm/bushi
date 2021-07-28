@@ -24,6 +24,12 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .lista-animes__texto {
+    font-size: 22px;
+  }
+}
+
 @media (min-width: 1200px) {
   .lista-animes__texto {
     font-size: 26px;
@@ -62,6 +68,21 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .anime-listado {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 1.5em;
+    margin: 1em 1em 1.6em 7.5em;
+  }
+}
+
 @media (max-width: 767.98px) {
   .anime-listado {
     margin: 1.2em 1em 1.7em 6.5em;
@@ -90,11 +111,19 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .anime-listado__portrait {
+    width: 150px;
+    height: 80px;
+    left: 8%;
+  }
+}
+
 @media (min-width: 1200px) {
   .anime-listado__portrait {
     width: 246px;
     height: 103px;
-    left: 100px;
+    left: 6%;
   }
 }
 
@@ -122,6 +151,15 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .anime-listado__titulo {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 1em;
+    letter-spacing: 0.125em;
+  }
+}
+
 @media (max-width: 767.98px) {
   .anime-listado__titulo {
     font-size: 13px;
@@ -141,6 +179,12 @@
   .anime-listado__infos {
     font-size: 18px;
     line-height: 21px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .anime-listado__infos {
+    display: none;
   }
 }
 
