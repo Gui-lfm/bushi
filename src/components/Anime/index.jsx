@@ -1,19 +1,30 @@
 import React from "react";
 import { useParams } from "react-router";
 import "../../assets/anime-style/style.css";
-import { useSelector } from "react-redux";
+import {useGetAnimeQuery} from '../animesSelecionados/animeSlice'
+import Spinner from "../Spinner";
 
 function Anime() {
   const {id}  = useParams();
 
-  const animes = useSelector((state) => state.lista);
+  const {isLoading, isError, data} = useGetAnimeQuery()
+
+  if(isLoading){
+
+    return <Spinner/>
+  }else if(isError){
+
+    return <div>ops, deu ruim</div>
+  }
+
+  let animes = data.data.allAnimes
   
   return (
     <>
       {animes
         .filter(anime => anime.id === id)
         .map((anime) => ( 
-          <div>
+          <div key={anime.id}>
             <section className="anime">
              <img src={anime.imageUrl} alt="" className="anime__imagem" />
               <div className="anime__detalhes">

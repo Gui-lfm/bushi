@@ -3,10 +3,21 @@ import "../../assets/lista-animes-style/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faInfinity } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import {useGetAnimeQuery} from '../animesSelecionados/animeSlice'
+import Spinner from "../Spinner";
 
 function ListaAnimes() {
-  const animes = useSelector((state) => state.lista);
+  const {data, isLoading, isError} = useGetAnimeQuery()
+  
+  if(isLoading){
+
+    return <Spinner/>
+  }else if(isError){
+
+    return <div>Ops, deu ruim</div>
+  }
+
+  let animes = data.data.allAnimes
 
   return (
     <section className="lista-animes">
@@ -21,7 +32,7 @@ function ListaAnimes() {
 
       {animes.map((anime) => {
         return (
-          <div className="anime-listado">
+          <div className="anime-listado" key={anime.id}>
             <div className="anime-listado__portrait">
               <img
                 src={anime.imageUrl}
