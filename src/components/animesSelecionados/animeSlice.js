@@ -17,7 +17,7 @@ export const animeSlice = createApi({
     endpoints: builder => ({
         getAnime: builder.query({
             query: () => ({
-                url: '/teste',
+                // url: '/teste',
                 method: 'POST',
                 body: JSON.stringify({
 
