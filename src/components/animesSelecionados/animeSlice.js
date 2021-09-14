@@ -17,6 +17,7 @@ export const animeSlice = createApi({
     endpoints: builder => ({
         getAnime: builder.query({
             query: () => ({
+                url: '/teste',
                 method: 'POST',
                 body: JSON.stringify({
 
@@ -33,7 +34,8 @@ export const animeSlice = createApi({
                           createdAt
                           episodes
                           genres
-                          synopsis 
+                          synopsis
+                          source 
                         }
                       }`
                 })

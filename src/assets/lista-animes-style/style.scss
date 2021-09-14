@@ -36,8 +36,7 @@
       font-size: 18px;
     }
 
-    @include tablet(){
-
+    @include tablet() {
       font-size: 22px;
     }
 
@@ -49,15 +48,17 @@
 
 .anime-listado {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: #f1f1f1;
+  // background: #cfcfcf;
   border-radius: 4px;
-  
-  &:nth-child(odd) {
+  &:nth-child(2n) {
+    background: #f1f1f1;
+  }
+  &:nth-child(2n + 1) {
     background: #cfcfcf;
   }
+
   &__link {
     text-decoration: none;
-
     color: black;
   }
 
@@ -70,7 +71,6 @@
   }
 
   @include tablet() {
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -81,7 +81,7 @@
   @include mobile() {
     margin: 1.2em 1em 1.7em 6.5em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 1em;
     align-items: center;
   }
@@ -92,20 +92,19 @@
     @include mobile() {
       width: 136px;
       height: 60px;
-      left: 10px;
+      left: 2vw;
     }
 
-    @include tablet(){
-
+    @include tablet() {
       width: 150px;
       height: 80px;
-      left: 8%
+      left: 8%;
     }
 
     @include desktop() {
       width: 246px;
       height: 103px;
-      left: 6%;
+      left: 5vw;
     }
   }
   &__imagem {
@@ -124,19 +123,21 @@
       font-size: 26px;
       line-height: 30px;
       letter-spacing: 0.125em;
+      width: 25vw;
     }
 
-    @include tablet(){
-      font-size: 18px;
+    @include tablet() {
+      font-size: 2.5vw;
       line-height: 20px;
       padding: 1em;
-      letter-spacing: 0.125em
+      letter-spacing: 0.125em;
+      width: 32vw;
     }
 
     @include mobile() {
-      font-size: 13px;
+      font-size: 4vw;
       line-height: 15px;
-      padding: 1em;
+      padding: 0.6em;
     }
   }
   &__infos {
@@ -149,15 +150,70 @@
     @include desktop() {
       font-size: 18px;
       line-height: 21px;
+      width: 150px;
+      border-left: 1px solid black;
+      padding-left: 1em;
     }
 
-    @include tablet(){
-
+    @include tablet() {
       display: none;
     }
 
     @include mobile() {
       display: none;
+    }
+  }
+}
+
+.erro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__titulo {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+
+    @include mobile() {
+      text-align: center;
+      font-size: 5.5vw;
+      padding-bottom: 0.5em;
+    }
+
+    @include tablet(){
+
+      font-size: 4vw;
+      text-align: justify;
+      padding-bottom: 1em;
+    }
+
+    @include desktop(){
+
+      font-size: 3vw;
+      text-align: justify;
+      padding-bottom: 2vw;
+    }
+  }
+
+  &__codigo {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+
+    @include mobile() {
+      font-size: 5.5vw;
+    }
+
+    @include tablet(){
+
+      font-size: 4vw;
+      align-self: flex-start;
+    }
+
+    @include desktop(){
+
+      font-size: 3vw;
     }
   }
 }

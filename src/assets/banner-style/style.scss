@@ -34,8 +34,8 @@
 
     @include desktop() {
       padding-top: 5em;
-      width: 223px;
-      height: 56px;
+      width: 11vw;
+      
     }
   }
 
@@ -77,9 +77,9 @@
     }
 
     @include desktop() {
-      font-size: 40px;
-      line-height: 42px;
-      padding: 4em 15em;
+      font-size: 3vw;
+      line-height: 3.5vw;
+      padding: 11.5vw 18vw;
     }
 
     @include tablet() {

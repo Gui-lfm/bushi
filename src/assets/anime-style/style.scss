@@ -24,6 +24,11 @@
     align-items: center;
   }
 
+  @include tablet(){
+
+    align-items: center;
+  }
+
 
   &__imagem {
     padding: 2em;
@@ -46,20 +51,22 @@
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 42px;
     letter-spacing: 0.125em;
     padding: 2em;
 
     @include mobile() {
-      font-size: 20px;
-      padding: 1.7em 0.5em;
+      font-size: 7vw;
+      padding: 1.2em;
+      text-align: center;
+      
     }
 
     @include tablet(){
 
-      font-size: 28px;
-      padding: 3em 1em;
+      font-size: 3.5vw;
+      padding: 0 1em 2em;
     }
   }
 
@@ -67,19 +74,22 @@
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 2vw;
+    line-height: 2.5vw;
     letter-spacing: 0.125em;
     text-align: justify;
     padding: 2em;
 
     @include mobile() {
-      font-size: 18px;
-      padding: 1.5em 0.5em;
+      font-size: 5.5vw;
+      line-height: 6vw;
+      padding: 1.5em;
+      
     }
 
     @include tablet() {
-      font-size: 24px;
+      font-size: 3vw;
+      line-height: 3.5vw;
       padding: 0 0.5em;
     }
   }
@@ -93,31 +103,38 @@
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 42px;
     letter-spacing: 0.125em;
     padding-bottom: 1em;
 
     @include mobile() {
-      font-size: 20px;
+      font-size: 6vw;
     }
+
   }
 
   &__lista {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 42px;
+    font-size: 1.7vw;
+    line-height: 2.5vw;
     letter-spacing: 0.125em;
 
     @include mobile() {
-      font-size: 18px;
+      font-size: 5.5vw;
+      line-height: 7vw;
       list-style: disc;
     }
 
-    &__lista-item{
+    @include tablet(){
 
+      font-size: 2.5vw;
+      line-height: 3.5vw;
+    }
+
+    &__lista-item{
 
       @include mobile(){
 

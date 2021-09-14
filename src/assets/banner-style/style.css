@@ -19,8 +19,7 @@
 @media (min-width: 1200px) {
   .banner__logo {
     padding-top: 5em;
-    width: 223px;
-    height: 56px;
+    width: 11vw;
   }
 }
 
@@ -65,9 +64,9 @@
 
 @media (min-width: 1200px) {
   .banner__titulo {
-    font-size: 40px;
-    line-height: 42px;
-    padding: 4em 15em;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    padding: 11.5vw 18vw;
   }
 }
 

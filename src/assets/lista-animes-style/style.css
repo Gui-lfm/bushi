@@ -39,11 +39,14 @@
 .anime-listado {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: #f1f1f1;
   border-radius: 4px;
 }
 
-.anime-listado:nth-child(odd) {
+.anime-listado:nth-child(2n) {
+  background: #f1f1f1;
+}
+
+.anime-listado:nth-child(2n + 1) {
   background: #cfcfcf;
 }
 
@@ -89,9 +92,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1em;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -107,7 +110,7 @@
   .anime-listado__portrait {
     width: 136px;
     height: 60px;
-    left: 10px;
+    left: 2vw;
   }
 }
 
@@ -123,7 +126,7 @@
   .anime-listado__portrait {
     width: 246px;
     height: 103px;
-    left: 6%;
+    left: 5vw;
   }
 }
 
@@ -148,23 +151,25 @@
     font-size: 26px;
     line-height: 30px;
     letter-spacing: 0.125em;
+    width: 25vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1198.98px) {
   .anime-listado__titulo {
-    font-size: 18px;
+    font-size: 2.5vw;
     line-height: 20px;
     padding: 1em;
     letter-spacing: 0.125em;
+    width: 32vw;
   }
 }
 
 @media (max-width: 767.98px) {
   .anime-listado__titulo {
-    font-size: 13px;
+    font-size: 4vw;
     line-height: 15px;
-    padding: 1em;
+    padding: 0.6em;
   }
 }
 
@@ -179,6 +184,9 @@
   .anime-listado__infos {
     font-size: 18px;
     line-height: 21px;
+    width: 150px;
+    border-left: 1px solid black;
+    padding-left: 1em;
   }
 }
 
@@ -191,6 +199,75 @@
 @media (max-width: 767.98px) {
   .anime-listado__infos {
     display: none;
+  }
+}
+
+.erro {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.erro__titulo {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+  .erro__titulo {
+    text-align: center;
+    font-size: 5.5vw;
+    padding-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .erro__titulo {
+    font-size: 4vw;
+    text-align: justify;
+    padding-bottom: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .erro__titulo {
+    font-size: 3vw;
+    text-align: justify;
+    padding-bottom: 2vw;
+  }
+}
+
+.erro__codigo {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+  .erro__codigo {
+    font-size: 5.5vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1198.98px) {
+  .erro__codigo {
+    font-size: 4vw;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .erro__codigo {
+    font-size: 3vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
