@@ -14,6 +14,7 @@
 <img alt="" src=""/>
 <img alt="" src=""/>
 <img alt="" src=""/>
+<img alt="" src=""/>
 
 ### Tablet
 <img alt="" src=""/>
@@ -32,3 +33,4 @@
 - [React js](https://pt-br.reactjs.org/)
 - [Sass](https://sass-lang.com/)
 - [Redux](https://redux.js.org/)
+- [DatoCMS](https://www.datocms.com/)
